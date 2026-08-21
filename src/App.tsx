@@ -18,6 +18,8 @@ import {
   Wrench,
 } from '@phosphor-icons/react'
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 const phoneDisplay = '(669) 323-7770'
 const phoneHref = 'tel:+16693237770'
 const googleListing = 'https://www.google.com/maps/search/?api=1&query=TopGuard+Roofing+San+Jose+CA'
@@ -90,7 +92,7 @@ function App() {
 
       <main>
         <section className="hero" aria-labelledby="hero-heading">
-          <img className="hero-image" src="/assets/topguard-roofing-hero.png" alt="Roofers installing charcoal shingles on a San Jose home" />
+          <img className="hero-image" src={assetUrl('assets/topguard-roofing-hero.png')} alt="Roofers installing charcoal shingles on a San Jose home" />
           <div className="hero-wash" />
           <div className="shell hero-inner">
             <div className="hero-copy">
@@ -140,7 +142,7 @@ function App() {
         <section className="craft section" aria-labelledby="craft-heading">
           <div className="shell craft-grid">
             <div className="craft-image-wrap">
-              <img src="/assets/topguard-skylight-detail.png" alt="Detailed flashing inspection around a roof skylight" loading="lazy" />
+              <img src={assetUrl('assets/topguard-skylight-detail.png')} alt="Detailed flashing inspection around a roof skylight" loading="lazy" />
               <p>Illustrative demo photography. Final site gallery to use TopGuard project photos.</p>
             </div>
             <div className="craft-copy">
