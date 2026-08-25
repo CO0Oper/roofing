@@ -1,15 +1,14 @@
 
-# Deploys BOTH versions of the TopGuard site from one Pages artifact:
+# Deploys all pitch concepts from one Pages artifact:
 #
 #   /      -> the original Vite/React build (unchanged, built by `npm run build:github`)
 #   /v2/   -> the static v2 concept in ./v2
+#   /marco-roofing/ -> the Marco Roofing React/Vite concept
 #
-# GitHub Pages only serves one site per repository, so a single workflow has to
-# publish both. Disable "Deploy to GitHub Pages" (deploy-pages.yml) in the
-# Actions tab so the two workflows don't race each other for the Pages
-# deployment lock. No existing source file is modified by this workflow.
+# GitHub Pages only serves one site per repository, so this workflow publishes
+# every concept together and avoids competing deployments.
 
-name: Deploy both versions to GitHub Pages
+name: Deploy pitch concepts to GitHub Pages
 
 on:
   push:
@@ -44,6 +43,9 @@ jobs:
       - name: Build original site
         run: npm run build:github
 
+      - name: Build Marco Roofing concept
+        run: npm run build:marco
+
       - name: Add v2 static site at /v2/
         run: |
           mkdir -p dist-github/v2
@@ -51,6 +53,12 @@ jobs:
           touch dist-github/.nojekyll
           echo "--- published tree ---"
           find dist-github -maxdepth 2 -type d | sort
+
+      - name: Add Marco Roofing concept at /marco-roofing/
+        run: |
+          mkdir -p dist-github/marco-roofing
+          cp -R dist-marco/. dist-github/marco-roofing/
+          touch dist-github/.nojekyll
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
