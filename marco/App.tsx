@@ -18,7 +18,6 @@ const phoneDisplay = '(510) 656-6400'
 const phoneHref = 'tel:+15106566400'
 const address = '43230 Osgood Rd, Fremont, CA 94539'
 const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Marco+Roofing+43230+Osgood+Rd+Fremont+CA+94539'
-const reviewSource = 'https://roofingcontractors.org/ca/fremont/marco-roofing'
 const diamondSource = 'https://www.diamondcertified.org/report/marco-roofing/'
 const bbbSource = 'https://www.bbb.org/us/ca/fremont/profile/roofing-contractors/marco-roofing-1116-11087'
 
@@ -33,8 +32,10 @@ const services = [
 const materials = ['Composition shingles', 'Wood shakes & shingles', 'Concrete & clay tile', 'Standing-seam metal']
 
 const reviewNotes = [
+  { name: 'Luis B.', date: 'August 2026', text: 'The crew did a great job, addressed concerns quickly, and made the customer feel like a priority.' },
   { name: 'Keith K.', date: 'June 2026', text: 'Repairs finished on schedule, with the crew leaving the property clean at the end of each day.' },
   { name: 'Carl M.', date: 'April 2026', text: 'A homeowner chose Marco after watching the team’s efficient, quality work throughout the neighborhood.' },
+  { name: 'Jordan G.', date: 'April 2026', text: 'A local electrical company described repeated positive experiences and said it confidently refers customers to Marco.' },
   { name: 'Don C.', date: 'January 2026', text: 'A significant storm leak was assessed quickly, temporarily stopped, and then repaired the following week.' },
 ]
 
@@ -104,8 +105,8 @@ function App() {
             </div>
             <div className="hero-visual">
               <picture>
-                <source media="(max-width: 760px)" srcSet={`${import.meta.env.BASE_URL}assets/hero-880.webp`} />
-                <img src={`${import.meta.env.BASE_URL}assets/hero-1800.webp`} alt="Roofers installing charcoal shingles on a California home; illustrative concept photography" width="1800" height="1200" fetchPriority="high" />
+                <source media="(max-width: 760px)" srcSet={`${import.meta.env.BASE_URL}assets/marco-hero-880.webp`} />
+                <img src={`${import.meta.env.BASE_URL}assets/marco-hero-1800.webp`} alt="Roofers installing charcoal shingles on a Bay Area home; original illustrative concept photography" width="1536" height="1024" fetchPriority="high" />
               </picture>
               <div className="hero-rating" aria-label="Public review rating 4.9 out of 5">
                 <span>Public rating</span>
@@ -119,9 +120,9 @@ function App() {
 
         <section className="proof-bar" aria-label="Public business highlights">
           <div className="shell proof-grid">
-            <a className="proof-item proof-link" href={reviewSource} target="_blank" rel="noreferrer">
+            <a className="proof-item proof-link" href={mapsUrl} target="_blank" rel="noreferrer">
               <Star weight="fill" aria-hidden="true" />
-              <span><strong>4.9 public rating</strong><small>Open the public review source</small></span>
+              <span><strong>4.9 public rating</strong><small>Open Google reviews</small></span>
             </a>
             <div className="proof-item"><span className="proof-year">1975</span><span><strong>Established in Fremont</strong><small>Family-owned public profile</small></span></div>
             <a className="proof-item proof-link" href={diamondSource} target="_blank" rel="noreferrer"><ShieldCheck weight="duotone" aria-hidden="true" /><span><strong>Diamond Certified</strong><small>Public company report</small></span></a>
@@ -135,7 +136,7 @@ function App() {
               <h2 id="reputation-heading">The reputation is already doing the selling.</h2>
               <p>Marco Roofing’s recent public feedback repeatedly points to organized work, clear communication, careful cleanup, and repairs that hold up.</p>
             </div>
-            <a className="text-link" href={reviewSource} target="_blank" rel="noreferrer">See the public review source <ArrowRight weight="bold" aria-hidden="true" /></a>
+            <a className="text-link" href={mapsUrl} target="_blank" rel="noreferrer">See reviews on Google <ArrowRight weight="bold" aria-hidden="true" /></a>
           </div>
           <div className="review-board">
             <article className="review-feature">
@@ -176,8 +177,8 @@ function App() {
           <div className="shell materials-grid">
             <div className="materials-visual">
               <picture>
-                <source media="(max-width: 760px)" srcSet={`${import.meta.env.BASE_URL}assets/skylight-800.webp`} />
-                <img src={`${import.meta.env.BASE_URL}assets/skylight-1200.webp`} alt="Roof flashing and skylight detail; illustrative concept photography" width="1200" height="900" loading="lazy" />
+                <source media="(max-width: 760px)" srcSet={`${import.meta.env.BASE_URL}assets/marco-detail-800.webp`} />
+                <img src={`${import.meta.env.BASE_URL}assets/marco-detail-1200.webp`} alt="A finished charcoal-shingle roof on a Fremont-area home; original illustrative concept photography" width="1536" height="1152" loading="lazy" />
               </picture>
               <p>Illustrative concept photography. A delivered site should use Marco Roofing’s own project gallery.</p>
             </div>
