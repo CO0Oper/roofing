@@ -3,8 +3,8 @@
 A second, independent website concept for TopGuard Roofing (San Jose, CA), built to sit
 alongside the original React/Vite version in this repo without changing any of it.
 
-**Live:** `https://co0oper.github.io/topguard-roofing-demo/v2/`
-**Original:** `https://co0oper.github.io/topguard-roofing-demo/`
+**Live:** `https://co0oper.github.io/roofing/v2/`
+**Original:** `https://co0oper.github.io/roofing/`
 
 ---
 
