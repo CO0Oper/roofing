@@ -1,15 +1,9 @@
 import type { Metadata } from 'next'
-import '@fontsource/ibm-plex-sans-condensed/500.css'
-import '@fontsource/ibm-plex-sans-condensed/600.css'
-import '@fontsource/ibm-plex-sans-condensed/700.css'
-import '@fontsource/source-sans-3/400.css'
-import '@fontsource/source-sans-3/600.css'
-import '@fontsource/source-sans-3/700.css'
 import '../src/styles.css'
 
 export const metadata: Metadata = {
-  title: 'TopGuard Roofing | San Jose Roofing Contractor',
-  description: 'TopGuard Roofing serves homeowners in San Jose with roof repair, replacement, inspection, gutters, skylights, and more.',
+  title: 'Ultimate Roof Repair | San Jose Roofing Contractor',
+  description: 'A website concept for Ultimate Roof Repair, a roofing contractor in San Jose, California. Call (669) 600-0975.',
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
