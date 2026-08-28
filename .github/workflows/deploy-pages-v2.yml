@@ -64,23 +64,40 @@ jobs:
 
       - name: Add Ultimate Roof Repair concept at /ultimate/
         run: |
+          set -euo pipefail
           mkdir -p dist-github/ultimate
           cp -R ultimate/. dist-github/ultimate/
-          # Derivatives are generated here rather than committed, so the repo
-          # stays free of binary duplicates of the two source PNGs.
           mkdir -p dist-github/ultimate/assets
-          for w in 880 1280 1800; do
-            convert public/assets/ultimate-roof-hero.png \
-              -resize "${w}x" -strip -interlace Plane -quality 82 \
-              "dist-github/ultimate/assets/hero-${w}.jpg"
-          done
-          for w in 800 1200; do
-            convert public/assets/ultimate-roof-detail.png \
-              -resize "${w}x" -strip -interlace Plane -quality 82 \
-              "dist-github/ultimate/assets/detail-${w}.jpg"
-          done
+
+          # The responsive derivatives are generated here rather than committed,
+          # so the repo keeps one copy of each photograph instead of six.
+          # ImageMagick is no longer preinstalled on the GitHub-hosted runners.
+          if ! command -v convert >/dev/null 2>&1; then
+            sudo apt-get update -qq || true
+            sudo apt-get install -y -qq imagemagick || true
+          fi
+
+          hero=public/assets/ultimate-roof-hero.png
+          detail=public/assets/ultimate-roof-detail.png
+          out=dist-github/ultimate/assets
+
+          if command -v convert >/dev/null 2>&1; then
+            for w in 880 1280 1800; do
+              convert "$hero" -resize "${w}x" -strip -interlace Plane -quality 82 "$out/hero-${w}.jpg"
+            done
+            for w in 800 1200; do
+              convert "$detail" -resize "${w}x" -strip -interlace Plane -quality 82 "$out/detail-${w}.jpg"
+            done
+          else
+            # Last-resort fallback: ship the originals under the expected names.
+            # Browsers sniff image bytes, so the page still renders - just heavier.
+            echo "::warning::ImageMagick unavailable; copying full-size PNGs instead"
+            for w in 880 1280 1800; do cp "$hero" "$out/hero-${w}.jpg"; done
+            for w in 800 1200; do cp "$detail" "$out/detail-${w}.jpg"; done
+          fi
+
           touch dist-github/.nojekyll
-          ls -la dist-github/ultimate/assets
+          ls -la "$out"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
