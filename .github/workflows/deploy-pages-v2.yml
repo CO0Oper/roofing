@@ -4,6 +4,8 @@
 #   /      -> the original Vite/React build (unchanged, built by `npm run build:github`)
 #   /v2/   -> the static v2 concept in ./v2
 #   /marco-roofing/ -> the Marco Roofing React/Vite concept
+#   /ultimate/ -> the Ultimate Roof Repair static concept in ./ultimate
+#                 (its responsive JPEGs are generated here from public/assets)
 #
 # GitHub Pages only serves one site per repository, so this workflow publishes
 # every concept together and avoids competing deployments.
@@ -59,6 +61,26 @@ jobs:
           mkdir -p dist-github/marco-roofing
           cp -R dist-marco/. dist-github/marco-roofing/
           touch dist-github/.nojekyll
+
+      - name: Add Ultimate Roof Repair concept at /ultimate/
+        run: |
+          mkdir -p dist-github/ultimate
+          cp -R ultimate/. dist-github/ultimate/
+          # Derivatives are generated here rather than committed, so the repo
+          # stays free of binary duplicates of the two source PNGs.
+          mkdir -p dist-github/ultimate/assets
+          for w in 880 1280 1800; do
+            convert public/assets/ultimate-roof-hero.png \
+              -resize "${w}x" -strip -interlace Plane -quality 82 \
+              "dist-github/ultimate/assets/hero-${w}.jpg"
+          done
+          for w in 800 1200; do
+            convert public/assets/ultimate-roof-detail.png \
+              -resize "${w}x" -strip -interlace Plane -quality 82 \
+              "dist-github/ultimate/assets/detail-${w}.jpg"
+          done
+          touch dist-github/.nojekyll
+          ls -la dist-github/ultimate/assets
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
