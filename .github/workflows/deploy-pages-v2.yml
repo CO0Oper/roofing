@@ -1,11 +1,13 @@
-
-# Deploys all pitch concepts from one Pages artifact:
+# Deploys every pitch concept from one Pages artifact:
 #
-#   /      -> the original Vite/React build (unchanged, built by `npm run build:github`)
-#   /v2/   -> the static v2 concept in ./v2
-#   /marco-roofing/ -> the Marco Roofing React/Vite concept
-#   /ultimate/ -> the Ultimate Roof Repair static concept in ./ultimate
-#                 (its responsive JPEGs are generated here from public/assets)
+#   /                  -> a deliberately blank page (./root)
+#   /ultimate/         -> the Ultimate Roof Repair static concept in ./ultimate
+#                         (its responsive JPEGs are generated here from public/assets)
+#   /ultimate/v2/      -> the Ultimate Roof Repair Vite/React build
+#   /v2/               -> the TopGuard Roofing static concept in ./v2
+#   /marco-roofing/    -> the Marco Roofing Vite/React build
+#
+# Nothing is linked from the root, so each concept is reached by typing its URL.
 #
 # GitHub Pages only serves one site per repository, so this workflow publishes
 # every concept together and avoids competing deployments.
@@ -42,19 +44,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build original site
+      - name: Build Ultimate Roof Repair Vite site
         run: npm run build:github
 
       - name: Build Marco Roofing concept
         run: npm run build:marco
 
-      - name: Add v2 static site at /v2/
+      - name: Serve a blank page at the root
+        run: |
+          mkdir -p dist-github
+          cp root/index.html dist-github/index.html
+          touch dist-github/.nojekyll
+
+      - name: Add the Vite build at /ultimate/v2/
+        run: |
+          mkdir -p dist-github/ultimate/v2
+          cp -R dist-ultimate-v2/. dist-github/ultimate/v2/
+
+      - name: Add TopGuard static site at /v2/
         run: |
           mkdir -p dist-github/v2
           cp -R v2/. dist-github/v2/
-          touch dist-github/.nojekyll
-          echo "--- published tree ---"
-          find dist-github -maxdepth 2 -type d | sort
 
       - name: Add Marco Roofing concept at /marco-roofing/
         run: |
@@ -98,6 +108,9 @@ jobs:
 
           touch dist-github/.nojekyll
           ls -la "$out"
+
+      - name: Show the published tree
+        run: find dist-github -maxdepth 2 -type d | sort
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

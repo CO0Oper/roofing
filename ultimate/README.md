@@ -5,6 +5,7 @@ company's public Google Business Profile. It sits alongside the other concepts i
 without touching any of them.
 
 **Live:** `https://co0oper.github.io/roofing/ultimate/`
+**Sibling concept:** `https://co0oper.github.io/roofing/ultimate/v2/`
 
 ---
 
@@ -30,7 +31,7 @@ First load is roughly 45 KB of HTML/CSS/JS plus fonts and one hero image
 (88–310 KB depending on viewport). The 2.5 MB source PNGs in `/public/assets` are left
 untouched.
 
-## What is different from the earlier concept at `/`
+## What is different from the Vite concept at `/ultimate/v2/`
 
 - **Real reviews.** All eight written Google reviews, quoted in full rather than summarised.
 - **A review wall** with service filters, free-text search, and per-card expand.
