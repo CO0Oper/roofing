@@ -25,3 +25,4 @@ html,body{overflow-x:hidden}
 .concern:hover{padding-left:4px;transform:translateX(8px)}
 @media(max-width:720px){.hero{min-height:930px;height:930px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+

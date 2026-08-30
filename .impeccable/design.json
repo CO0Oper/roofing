@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-30T00:00:00+07:00",
+  "title": "Design System: Dryforce Rainfall Field Station",
+  "extensions": {
+    "colorMeta": {
+      "storm-cell": { "role": "neutral", "displayName": "Storm Cell Navy", "canonical": "#071d2b", "tonalRamp": ["#031018", "#071d2b", "#12384d", "#2f576a", "#587887", "#89a0a9", "#c4d0d4", "#eef3f4"] },
+      "floodline": { "role": "neutral", "displayName": "Floodline Blue", "canonical": "#0b2a3c", "tonalRamp": ["#06131c", "#0b2a3c", "#16465f", "#35657d", "#62869a", "#91a9b5", "#c8d4da", "#eff4f6"] },
+      "rain-gauge": { "role": "secondary", "displayName": "Rain Gauge Cyan", "canonical": "#5ec9e8", "tonalRamp": ["#082c38", "#0d4d61", "#167590", "#29a0c1", "#5ec9e8", "#8ddcf1", "#c3eef8", "#edfaff"] },
+      "inspection-amber": { "role": "primary", "displayName": "Inspection Amber", "canonical": "#f7b733", "tonalRamp": ["#382300", "#6a4300", "#a56800", "#dd8f0b", "#f7b733", "#facc6d", "#fde4ae", "#fff7e5"] },
+      "storm-ledger": { "role": "neutral", "displayName": "Storm Ledger Paper", "canonical": "#f4f0e5", "tonalRamp": ["#25231f", "#49463f", "#716d63", "#99958a", "#bfbbb0", "#dcd8ce", "#eeeae0", "#f9f7f1"] },
+      "dry-paper": { "role": "neutral", "displayName": "Dry Paper White", "canonical": "#fffdf7", "tonalRamp": ["#272520", "#4b4943", "#74716a", "#9e9b94", "#c6c3bc", "#e3e0da", "#f4f1eb", "#fffdf7"] },
+      "roofline-ink": { "role": "neutral", "displayName": "Roofline Ink", "canonical": "#0c2633", "tonalRamp": ["#061117", "#0c2633", "#1a4252", "#3b6271", "#66838e", "#95a8af", "#ccd5d8", "#f0f4f5"] },
+      "slate-note": { "role": "neutral", "displayName": "Slate Note", "canonical": "#52656d", "tonalRamp": ["#10191c", "#26353b", "#52656d", "#74858c", "#99a6ab", "#bbc4c7", "#dce2e4", "#f4f7f7"] },
+      "weathered-rule": { "role": "neutral", "displayName": "Weathered Rule", "canonical": "#a8b4b2", "tonalRamp": ["#17201f", "#34413f", "#586764", "#7d8d8a", "#a8b4b2", "#c0cac8", "#dce2e1", "#f3f6f5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Station Display", "purpose": "Hero statements only." },
+      "headline": { "displayName": "Field Headline", "purpose": "Major section declarations." },
+      "title": { "displayName": "Operational Title", "purpose": "Service names and compact actions." },
+      "body": { "displayName": "Plainspoken Body", "purpose": "Explanations, reviews, and instructions." },
+      "label": { "displayName": "Instrument Label", "purpose": "Disclosures and operational metadata." }
+    },
+    "shadows": [
+      { "name": "control-rest", "value": "0 8px 22px rgba(7,29,43,.2)", "purpose": "Base button lift." },
+      { "name": "control-hover", "value": "0 13px 28px rgba(7,29,43,.28)", "purpose": "Button response during hover." },
+      { "name": "verified-proof", "value": "0 16px 38px rgba(4,18,27,.28)", "purpose": "Separates verified listing proof from hero photography." },
+      { "name": "contact-station", "value": "0 18px 44px rgba(77,49,4,.18)", "purpose": "Lifts the contact form from the amber field." },
+      { "name": "rain-glow", "value": "0 0 22px rgba(94,201,232,.55)", "purpose": "Makes live rainfall telemetry visible." }
+    ],
+    "motion": [
+      { "name": "diagnostic-reveal", "value": "350ms cubic-bezier(.2,.8,.2,1)", "purpose": "Slides the service-row evidence field into view." },
+      { "name": "hero-resolve", "value": "1.1s cubic-bezier(.2,.8,.2,1)", "purpose": "Resolves the hero image from post-storm blur." },
+      { "name": "rainfall-draw", "value": "1.8s 450ms cubic-bezier(.15,.8,.25,1)", "purpose": "Draws the rainfall trace once." }
+    ],
+    "breakpoints": [
+      { "name": "compact-navigation", "value": "1000px" },
+      { "name": "single-column-field-report", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Inspection Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The decisive amber action for calls and inspection requests.",
+      "html": "<button class=\"ds-button-primary\">REQUEST INSPECTION</button>",
+      "css": ".ds-button-primary{min-height:54px;padding:14px 21px;border:1px solid #f7b733;border-radius:0;background:#f7b733;color:#071d2b;font:700 16px 'Source Sans 3',sans-serif;box-shadow:0 8px 22px rgba(7,29,43,.2);transition:transform .2s ease,box-shadow .2s ease}.ds-button-primary:hover{transform:translateY(-3px);box-shadow:0 13px 28px rgba(7,29,43,.28)}.ds-button-primary:focus-visible{outline:3px solid #5ec9e8;outline-offset:4px}"
+    },
+    {
+      "name": "Storm Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "A deep-storm transition action on paper surfaces.",
+      "html": "<button class=\"ds-button-ink\">TELL US WHAT HAPPENED</button>",
+      "css": ".ds-button-ink{min-height:54px;padding:14px 21px;border:1px solid #071d2b;border-radius:0;background:#071d2b;color:#fffdf7;font:700 16px 'Source Sans 3',sans-serif;box-shadow:0 8px 22px rgba(7,29,43,.2);transition:transform .2s ease,box-shadow .2s ease}.ds-button-ink:hover{transform:translateY(-3px);box-shadow:0 13px 28px rgba(7,29,43,.28)}.ds-button-ink:focus-visible{outline:3px solid #5ec9e8;outline-offset:4px}"
+    },
+    {
+      "name": "Inspection Field",
+      "kind": "input",
+      "description": "Square, legible input used in the contact station.",
+      "html": "<label class=\"ds-field-label\">WHAT HAPPENED?<input class=\"ds-field\" placeholder=\"Describe what you are seeing\"></label>",
+      "css": ".ds-field-label{display:flex;flex-direction:column;gap:8px;color:#0c2633;font:700 12px 'Source Sans 3',sans-serif;letter-spacing:.06em}.ds-field{padding:14px 15px;border:1px solid #7a898d;border-radius:0;background:#fff;color:#0c2633;font:400 16px 'Source Sans 3',sans-serif}.ds-field:focus{outline:none;border-color:#0b2a3c;box-shadow:0 0 0 3px rgba(94,201,232,.35)}"
+    },
+    {
+      "name": "Verified Listing Proof",
+      "kind": "card",
+      "description": "A compact public-proof record, never a generic card family.",
+      "html": "<div class=\"ds-proof\"><strong>4.7</strong><span>★★★★★<small>22 Google reviews</small></span></div>",
+      "css": ".ds-proof{display:flex;align-items:center;gap:18px;padding:19px 22px;background:#f4f0e5;color:#071d2b;box-shadow:0 16px 38px rgba(4,18,27,.28)}.ds-proof>strong{font:600 64px/.85 'IBM Plex Sans Condensed',sans-serif}.ds-proof>span{display:flex;flex-direction:column;color:#d57b00;font:700 14px 'Source Sans 3',sans-serif}.ds-proof small{color:#071d2b}"
+    },
+    {
+      "name": "Diagnostic Service Row",
+      "kind": "custom",
+      "description": "A ruled evidence row that reveals a dry-paper field on hover.",
+      "html": "<a class=\"ds-service\" href=\"#\"><span><strong>ROOF REPAIR</strong><small>Address vulnerable roof details.</small></span><b>→</b></a>",
+      "css": ".ds-service{position:relative;display:grid;grid-template-columns:1fr 24px;align-items:center;min-height:110px;padding:20px 10px;border-top:1px solid #071d2b;border-bottom:1px solid #071d2b;color:#0c2633;text-decoration:none;overflow:hidden}.ds-service:before{content:'';position:absolute;inset:0;z-index:-1;background:#fffdf7;transform:translateX(-101%);transition:transform 350ms cubic-bezier(.2,.8,.2,1)}.ds-service:hover:before{transform:translateX(0)}.ds-service span{display:flex;justify-content:space-between;gap:24px}.ds-service strong{font:600 28px 'IBM Plex Sans Condensed',sans-serif}.ds-service small{color:#52656d;font:400 16px 'Source Sans 3',sans-serif}.ds-service:focus-visible{outline:3px solid #5ec9e8;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Rainfall Field Station",
+    "overview": "Dryforce is presented as a calm instrument panel placed directly in the weather: deep storm surfaces, live cyan telemetry, amber action fields, documentary roof imagery, and terse operational labels. The system borrows the legibility and measured confidence of a rainfall station without turning the homeowner experience into an engineering dashboard. The visual journey moves from threat to diagnosis to proof to contact. Scale is intentionally dramatic in the first viewport, while the remaining page is ruled, square, and highly legible; verified listing proof and owner-contact actions stay visually separate from illustrative imagery.",
+    "keyCharacteristics": ["Storm-dark photographic first viewport with a single animated rainfall trace.", "Condensed uppercase display typography paired with plainspoken sans-serif body copy.", "Inspection amber is the decisive action field; rain cyan is telemetry and focus feedback.", "Square controls, one-pixel rules, restrained shadows, and documentary image disclosures.", "Mobile collapses to one column and keeps call and inspection actions fixed at the bottom."],
+    "rules": [
+      { "name": "The Action Weather Rule", "body": "Amber means act; cyan means observe, trace, or focus. Do not swap their jobs.", "section": "colors" },
+      { "name": "The Storm-to-Paper Rule", "body": "Dark surfaces establish the weather problem; paper surfaces organize the homeowner's next step.", "section": "colors" },
+      { "name": "The Readout-and-Response Rule", "body": "IBM Plex Sans Condensed states what the station knows; Source Sans 3 explains what the homeowner can do.", "section": "typography" },
+      { "name": "The One Instrument Field Rule", "body": "The hero may layer telemetry over photography; content sections return to an orderly grid and never compete with it using additional decorative dashboards.", "section": "layout" },
+      { "name": "The Evidence Has Weight Rule", "body": "Elevation belongs to proof and action; repeated service and review content stays ruled and flat.", "section": "elevation" }
+    ],
+    "dos": ["Do keep the public phone action, verified listing proof, and inspection path visually immediate.", "Do use Inspection Amber for decisive action and Rain Gauge Cyan for telemetry, water, focus, and inspection outlines.", "Do preserve square controls, one-pixel ruled records, condensed uppercase display type, and restrained evidence-oriented shadows.", "Do disclose illustrative concept images directly on the images.", "Do preserve the 1000px navigation change, 720px single-column change, reduced-motion treatment, and persistent mobile contact rail."],
+    "donts": ["Don't turn services or reviews into rounded floating card grids; their documentary rhythm comes from full-width rules.", "Don't add generic gradients, decorative glass panels, or extra animated charts beyond the rainfall trace and hero resolve.", "Don't use Rain Gauge Cyan as a competing primary button color or scatter Inspection Amber across passive content.", "Don't represent illustrative photography as completed company work or blur it together with verified public proof.", "Don't soften the system with rounded controls, friendly blob shapes, or lifestyle-brand ornament."]
+  }
+}

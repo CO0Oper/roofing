@@ -6,6 +6,7 @@ dist/
 dist-github/
 dist-marco/
 .next/
+.vinext/
 .wrangler/
 *.log
 *.tsbuildinfo
