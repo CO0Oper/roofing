@@ -54,6 +54,9 @@ jobs:
       - name: Build Dryforce concept
         run: npm run build:dryforce
 
+      - name: Build J Roofing concept
+        run: npm run build:j-roofing
+
       - name: Serve a blank page at the root
         run: |
           mkdir -p dist-github
@@ -80,6 +83,11 @@ jobs:
         run: |
           mkdir -p dist-github/dryforce
           cp -R dist-dryforce/. dist-github/dryforce/
+
+      - name: Add J Roofing concept at /j-roofing/
+        run: |
+          mkdir -p dist-github/j-roofing
+          cp -R dist-j-roofing/. dist-github/j-roofing/
 
       - name: Add Ultimate Roof Repair concept at /ultimate/
         run: |

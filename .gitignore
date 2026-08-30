@@ -5,6 +5,7 @@ node_modules/
 dist/
 dist-github/
 dist-marco/
+dist-j-roofing/
 .next/
 .vinext/
 .wrangler/

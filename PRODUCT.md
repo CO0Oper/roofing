@@ -1,39 +1,37 @@
-# Dryforce Water Damage & Roofing
+# J Roofing
 
 ## Product
 
-A pitch-ready website concept for Dryforce Water Damage & Roofing, a roofing contractor listed in Santa Rosa, California.
+A pitch-ready website concept for J Roofing, a roofing contractor listed in Stockton, California.
 
 ## Users and purpose
 
-- Santa Rosa homeowners dealing with roof concerns or signs of water intrusion.
+- Stockton homeowners considering roof replacement, repair, gutters, or downspouts.
 - The business owner, evaluating the site as a direct call and inspection-request channel.
-- Put the verified phone number, Google proof, and inspection path within immediate reach, especially on mobile.
+- Put the verified phone number and Google proof within immediate reach, especially on mobile.
 
 ## Verified public information
 
-- Business name: Dryforce Water Damage & Roofing.
+- Business name: J Roofing.
 - Category: Roofing contractor.
-- Rating shown: 4.7 from 22 Google reviews.
-- Phone: +1 707-622-0900.
-- Address: 512 Sonoma Ave, Santa Rosa, CA 95401.
-- Public reviews displayed by Google include Jade Rangel, Eduardo Benjamin, and Rachael Raymond.
-- No website is shown on the supplied listing.
+- Rating shown: 4.9 from 74 Google reviews.
+- Phone: +1 209-483-7588.
+- Address: 1728 E Market St, Stockton, CA 95205.
+- Ten public Google review excerpts are presented in the pitch site with reviewer names and clear source labeling.
 
 ## Positioning
 
-The site connects the exterior source and interior warning signs: roofing and water-damage concerns enter one clear first conversation.
+The site frames careful roofing craft through a fanned material-sample deck, then lets Stockton customers provide the proof.
 
 ## Operating context
 
 - Primary action: call the public listing phone number.
-- Secondary action: request an inspection through a demo form.
-- The concept form does not send or store data.
+- Secondary action: open the verified Google listing and read reviews.
 
 ## Evidence on hand
 
-- User-supplied Google Maps listing and screenshot.
-- Public rating, review count, address, phone, and three displayed review excerpts.
+- User-supplied Google Maps listing.
+- Public rating, review count, address, phone, and ten displayed review excerpts.
 - Three original generated images made for this project.
 
 ## Product principles
