@@ -6,6 +6,7 @@
 #   /ultimate/v2/      -> the Ultimate Roof Repair Vite/React build
 #   /v2/               -> the TopGuard Roofing static concept in ./v2
 #   /marco-roofing/    -> the Marco Roofing Vite/React build
+#   /dryforce/         -> the Dryforce Vite/React build
 #
 # Nothing is linked from the root, so each concept is reached by typing its URL.
 #
@@ -50,6 +51,9 @@ jobs:
       - name: Build Marco Roofing concept
         run: npm run build:marco
 
+      - name: Build Dryforce concept
+        run: npm run build:dryforce
+
       - name: Serve a blank page at the root
         run: |
           mkdir -p dist-github
@@ -71,6 +75,11 @@ jobs:
           mkdir -p dist-github/marco-roofing
           cp -R dist-marco/. dist-github/marco-roofing/
           touch dist-github/.nojekyll
+
+      - name: Add Dryforce concept at /dryforce/
+        run: |
+          mkdir -p dist-github/dryforce
+          cp -R dist-dryforce/. dist-github/dryforce/
 
       - name: Add Ultimate Roof Repair concept at /ultimate/
         run: |

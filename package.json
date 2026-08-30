@@ -7,6 +7,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:github": "vite build --config vite.github.config.ts",
+    "build:dryforce": "vite build --config vite.dryforce.config.ts",
     "build:marco": "vite build --config vite.marco.config.ts",
     "dev:marco": "vite --config vite.marco.config.ts",
     "preview": "vinext start"
