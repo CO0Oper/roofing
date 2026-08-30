@@ -1,6 +1,6 @@
 ---
-name: J Roofing Material Sample Deck
-description: A proof-first Stockton roofing pitch built from tactile material bands, verified reviews, and direct contact.
+name: J Roofing Roofline Evidence Board
+description: A proof-first Stockton roofing pitch built from direct craft imagery, verified reviews, and low-friction estimate contact.
 colors:
   asphalt: "#162321"
   mineral: "#f2f0e7"
@@ -68,28 +68,34 @@ components:
     textColor: "{colors.asphalt}"
     rounded: "{rounded.card}"
     padding: "30px"
+  estimate-field:
+    backgroundColor: "{colors.review-field}"
+    textColor: "{colors.paper}"
+    rounded: "10px"
+    padding: "13px 15px"
+    height: "54px"
 ---
 
-# Design System: J Roofing Material Sample Deck
+# Design System: J Roofing Roofline Evidence Board
 
 ## Overview
 
-**Creative North Star: "The Material Sample Deck"**
+**Creative North Star: "The Roofline Evidence Board"**
 
-J Roofing is presented through the tactile language of a contractor's physical sample kit: overlapping shingle-like bands, clipped roof geometry, restrained mineral colors, and precise soft depth. Monumental condensed type supplies confidence while verified Google proof—not invented claims—does the persuading.
+J Roofing is presented as a clear roofline evidence board: one strong, visibly disclosed crew concept establishes craft, a compact Google badge supplies verified proof, and direct service and estimate actions carry the visitor forward. Monumental condensed type supplies confidence while customer language—not invented claims—does the persuading.
 
 This is a route-specific visual world. It must not inherit another roofing template, its section format, its imagery, or its decorative assets; only shared product facts may cross route boundaries.
 
 **Key Characteristics:**
 
-- A fanned stack of material and proof bands replaces the generic house-photo hero.
+- One generated crew image anchors the hero, paired with a compact verified Google proof badge.
 - Asphalt green and mineral paper provide the field; safety orange is the action and proof signal.
-- Google evidence and direct calling stay visible at decision points, especially on mobile.
+- Service rows lead directly to a preselected estimate request; the form opens a prefilled SMS to the verified phone.
 - Generated roofing photography is treated as illustrative concept material, never company project evidence.
 
 ## Colors
 
-The palette feels like charcoal roofing, mineral granules, aged sage material samples, and one high-visibility contractor marker.
+The palette feels like charcoal roofing, mineral granules, aged sage roof material, and one high-visibility contractor marker.
 
 ### Primary
 
@@ -97,8 +103,8 @@ The palette feels like charcoal roofing, mineral granules, aged sage material sa
 
 ### Secondary
 
-- **Sage Shingle:** A tactile material color for sample bands and selected review emphasis.
-- **Gutter Green:** A dark metal-like secondary band and review-card variation.
+- **Sage Shingle:** A tactile image fallback and selected review emphasis.
+- **Gutter Green:** A dark metal-like review-card variation.
 
 ### Neutral
 
@@ -136,26 +142,26 @@ The palette feels like charcoal roofing, mineral granules, aged sage material sa
 
 ## Layout
 
-The desktop field is capped at 1380px with fluid outer gutters. The 74px fixed header frames a two-column hero: concise sales copy occupies the smaller column and the fanned sample deck occupies the larger. Services repeat the asymmetric split with a sticky introduction and ruled records. Reviews use a 12-column masonry-like arrangement; contact closes in two balanced columns.
+The desktop field is capped at 1380px with fluid outer gutters. The 74px fixed header frames a two-column hero: concise sales copy occupies the smaller column and one 540px-minimum crew image with an overlaid proof badge occupies the larger. Services repeat the asymmetric split with a sticky introduction and actionable ruled records. The dark estimate section uses an 0.8/1.2 copy-to-form split before the craft gallery and review proof. Reviews use a 12-column masonry-like arrangement; contact closes in two balanced columns.
 
-At 980px, navigation is removed, service content stacks, and reviews become two-up. At 720px, gutters reduce to 18px, the header becomes 66px, hero and contact become one column, actions become full-width, the sample deck compresses into a 290px stack, and reviews become an 86vw horizontal snap rail. A fixed 66px bottom bar preserves call and Google actions; footer space clears it.
+At 980px, navigation is removed, service content stacks, and reviews become two-up. At 720px, gutters reduce to 18px, the header becomes 66px, hero, estimate, gallery, and contact become one column, actions become full-width, the hero image becomes a 300px field, and reviews become an 86vw horizontal snap rail. Form fields stack in source order. A fixed 66px bottom bar preserves call and Google actions; footer space clears it.
 
-**The Proof-in-Reach Rule.** Every major layout state keeps a call path and Google proof within immediate reach without introducing a form or unsupported promise.
+**The Proof-in-Reach Rule.** Every major layout state keeps estimate, call, and Google proof paths within immediate reach without inventing a service promise.
 
 ## Elevation & Depth
 
-Depth is tactile and localized. Sample bands overlap, rotate slightly, and separate with broad shadows; cards and contact actions use softer lift. Ruled service rows and proof strips stay flat so the sample deck remains the signature dimensional moment.
+Depth is tactile and localized. The single hero image carries the strongest broad shadow; cards and contact actions use softer lift. Ruled service rows, form fields, and proof strips stay flat so imagery and action retain clear hierarchy.
 
-- **Sample band:** `0 22px 40px rgba(0,0,0,.24)` for the fanned material stack.
+- **Hero visual:** `0 28px 54px rgba(0,0,0,.28)` for the single crew concept image.
 - **Review card:** `0 14px 30px rgba(3,12,10,.16)` for customer excerpts.
 - **Primary control:** orange-tinted lift that grows from `0 10px 28px rgba(255,92,53,.24)` on hover.
 - **Dark contact action:** `0 16px 34px rgba(22,35,33,.24)`.
 
-**The Tactile Center Rule.** Concentrate rotation, overlap, and perspective in the sample deck; the rest of the route organizes evidence calmly.
+**The Single Visual Anchor Rule.** Keep the hero to one clearly disclosed image with one compact proof badge; the rest of the route organizes evidence calmly.
 
 ## Shapes
 
-Rounded rectangles resemble sample tabs and physical swatches: controls use 13px corners, cards and image frames use 14px, and small disclosure labels use 6–8px. The brand's orange J shield is the one clipped polygon; circular geometry is limited to reviewer initials. Do not introduce blob shapes or unrelated ornamental silhouettes.
+Rounded rectangles feel practical rather than soft: form fields and the hero proof badge use 10px corners, controls use 13px, review and gallery cards use 14px, the hero visual uses 18px, and disclosure labels use 6–8px. The brand's orange J shield is the one clipped polygon; circular geometry is limited to reviewer initials. Do not introduce blob shapes or unrelated ornamental silhouettes.
 
 ## Components
 
@@ -167,7 +173,7 @@ Rounded rectangles resemble sample tabs and physical swatches: controls use 13px
 
 ### Cards / Containers
 
-- **Sample Deck:** Four overlapping bands—concept crew image, shingle detail, gutter detail, and Google rating—with small, restrained rotations and a shared lower-edge tick pattern where applicable.
+- **Hero Visual:** One full-bleed crew concept image with a visible disclosure at lower left and an orange Google proof badge at lower right. Do not reintroduce stacked or rotating image bands.
 - **Review Card:** Paper, orange, sage, and gutter-green variants in a deliberately irregular grid; 14px corners and 30px padding.
 - **Proof Strip:** Three edge-to-edge ruled records on orange; it is not a floating card group.
 
@@ -177,7 +183,11 @@ The fixed asphalt header uses the clipped orange J mark, centered desktop links,
 
 ### Service Row
 
-Each full-width ruled record pairs an orange line icon, condensed service title, short evidence-led explanation, and an arrow that moves diagonally on hover. Rows never become generic cards.
+Each full-width ruled record is an accessible estimate link pairing an orange line icon, condensed service title, short evidence-led explanation, and an arrow that moves diagonally on hover. Activating a row moves to the estimate form and preselects that exact service. Rows never become generic cards.
+
+### Estimate Form
+
+The native form sits on Asphalt in a two-column grid with explicit visible labels. Inputs, select, and textarea use Review Field fill, Paper text, 10px corners, 54px minimum control height, and high-contrast focus. Submission does not send data to a server: it opens the visitor's messaging app with a prefilled SMS to the verified J Roofing number. The note beneath the button must state this behavior and retain the direct call alternative. Name, phone, property address, selected service, and project details remain required.
 
 ### Concept Image Label
 
@@ -187,9 +197,11 @@ Generated imagery must be identified as concept material in useful alt text and 
 
 ### Do:
 
-- **Do** keep the sample deck as the route's unique first-viewport device.
+- **Do** keep the first viewport to one disclosed crew concept image and one compact Google proof badge.
 - **Do** separate verified Google facts and customer quotations from illustrative photography.
 - **Do** preserve the 980px and 720px layout changes, reduced-motion behavior, visible focus, and mobile contact bar.
+- **Do** make every service row link to the estimate form with its service preselected.
+- **Do** disclose that estimate submission opens a prefilled SMS to the verified phone and keep the direct-call fallback.
 - **Do** source every new visual specifically for this route and label generated imagery as concept material.
 
 ### Don't:
@@ -197,4 +209,5 @@ Generated imagery must be identified as concept material in useful alt text and 
 - **Don't** reuse a prior website template, imagery set, page format, signature component, or decorative asset.
 - **Don't** imply that generated crew, shingle, or gutter images document J Roofing's completed projects.
 - **Don't** invent licensing, warranties, financing, certifications, response times, project history, or owner-approved service claims.
-- **Don't** replace the fanned material logic with a generic contractor hero, feature-card grid, or stock-roof collage.
+- **Don't** reintroduce a layered sample deck, multi-image hero collage, or generic contractor feature-card grid.
+- **Don't** imply the estimate form submits to a backend, stores information, or contacts the business automatically.

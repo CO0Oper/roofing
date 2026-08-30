@@ -21,12 +21,12 @@ A pitch-ready website concept for J Roofing, a roofing contractor listed in Stoc
 
 ## Positioning
 
-The site frames careful roofing craft through a fanned material-sample deck, then lets Stockton customers provide the proof.
+The site frames careful roofing craft through one clear crew image, then lets Stockton customers provide the proof.
 
 ## Operating context
 
-- Primary action: call the public listing phone number.
-- Secondary action: open the verified Google listing and read reviews.
+- Primary action: request an estimate through a short form that opens a prefilled text to the public listing phone number.
+- Secondary actions: call directly or open the verified Google listing and read reviews.
 
 ## Evidence on hand
 
