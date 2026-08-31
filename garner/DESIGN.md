@@ -1,14 +1,14 @@
 ---
 name: Garner Roof-Craft Ledger
-description: A warm editorial field report that turns roof detail and customer language into a clear next step.
+description: A workwear-red editorial field report that turns roof detail and customer language into a clear next step.
 colors:
-  roofline-ink: "#142721"
-  mineral-field: "#18332d"
-  ledger-paper: "#f3efe3"
-  warm-cream: "#fffaf0"
-  action-copper: "#d35f32"
-  safety-lime: "#dfe75d"
-  weathered-rule: "#9fa99e"
+  roofline-ink: "#241d1b"
+  oxblood-field: "#701b18"
+  ledger-paper: "#f2ede4"
+  warm-cream: "#fffaf3"
+  workwear-red: "#c92f27"
+  signal-red: "#f04a3f"
+  red-tint: "#f2cbc7"
 typography:
   display:
     fontFamily: "Archivo Black, sans-serif"
@@ -36,8 +36,8 @@ rounded:
   square: "0"
 components:
   button-primary:
-    backgroundColor: "{colors.safety-lime}"
-    textColor: "{colors.roofline-ink}"
+    backgroundColor: "{colors.workwear-red}"
+    textColor: "#ffffff"
     rounded: "{rounded.square}"
     padding: "14px 20px"
     height: "54px"
@@ -55,7 +55,7 @@ components:
 
 **Creative North Star: "The Roof-Craft Ledger"**
 
-The system reads like a field report laid over documentary roofing work: mineral green, warm paper, square ruled geometry, and decisive safety-lime action. Monumental language makes roof-system craft memorable; customer excerpts supply the evidence.
+The system reads like a field report laid over documentary roofing work: crew-uniform red, deep oxblood, warm paper, and square ruled geometry. Monumental language makes roof-system craft memorable; customer excerpts supply the evidence.
 
 **Key Characteristics:**
 
@@ -66,9 +66,9 @@ The system reads like a field report laid over documentary roofing work: mineral
 
 ## Colors
 
-Safety Lime identifies primary action and selected proof. Action Copper closes the page and carries focus. Mineral Field and ledger neutrals organize atmosphere and reading.
+Workwear Red identifies primary action and closes the page. Oxblood carries the large structural fields; a pale red tint marks selected proof without competing with the call to action.
 
-**The Proof and Action Rule.** Lime means act or notice verified proof; copper means focus, contact, or the closing transition.
+**The Workwear Red Rule.** Solid red means act; oxblood means structure; the pale tint means notice supporting proof.
 
 ## Typography
 
@@ -95,13 +95,13 @@ Controls, fields, review cards, and proof surfaces use square corners. One-pixel
 
 ### Buttons
 
-- Primary buttons use Safety Lime, Roofline Ink, square corners, and a 54px minimum height.
+- Primary buttons use Workwear Red, white type, square corners, and a 54px minimum height.
 - Secondary buttons use Warm Cream with the same dimensions.
-- Hover lifts by 3px; focus uses a 3px copper outline with 4px offset.
+- Hover lifts by 3px; focus uses a 3px workwear-red outline with 4px offset.
 
 ### Cards / Containers
 
-- Review cards use ledger paper, warm cream, mineral field, or safety lime in a three-column masonry rhythm.
+- Review cards use ledger paper, warm cream, oxblood, or pale red in a three-column masonry rhythm.
 - Cards stay square and ruled; they do not use generic rounded-card chrome.
 
 ### Inputs / Fields
@@ -111,14 +111,18 @@ Controls, fields, review cards, and proof surfaces use square corners. One-pixel
 
 ### Navigation
 
-The fixed paper header uses compact bold links and one copper-underlined Google-listing action. Primary navigation hides below 950px.
+The fixed paper header uses compact bold links and one red-underlined Google-listing action. Primary navigation hides below 950px.
+
+## Motion
+
+The authored entrance assembles like a roof detail: the image resolves, a red roofline draws across the field, the headline is uncovered as one plane, and the public-proof ledger locks into place. Service and review hover states acknowledge inspection; the demo completion check draws once. All movement uses native CSS, runs only when relevant, and has a reduced-motion alternative.
 
 ## Do's and Don'ts
 
 ### Do:
 
 - **Do** keep public facts and demo disclosures visible.
-- **Do** use Safety Lime sparingly for action and proof.
+- **Do** use solid red for action and the pale tint for supporting proof.
 - **Do** attribute every review excerpt directly.
 - **Do** preserve reduced-motion and keyboard focus behavior.
 

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-31T14:00:00Z",
+  "title": "Design System: Garner Roof-Craft Ledger",
+  "extensions": {
+    "colorMeta": {
+      "roofline-ink": { "role": "neutral", "displayName": "Roofline Ink", "canonical": "#241d1b", "tonalRamp": ["#0d0a09", "#241d1b", "#443936", "#655956", "#897c78", "#aea29e", "#d7ceca", "#f7f3f1"] },
+      "oxblood-field": { "role": "primary", "displayName": "Oxblood Field", "canonical": "#701b18", "tonalRamp": ["#210302", "#430b09", "#701b18", "#9c2a24", "#c54238", "#e67a70", "#f3b8b2", "#fce9e7"] },
+      "workwear-red": { "role": "secondary", "displayName": "Workwear Red", "canonical": "#c92f27", "tonalRamp": ["#320403", "#64100c", "#971f19", "#c92f27", "#e45b52", "#ef9089", "#f6c4c0", "#fceceb"] },
+      "red-tint": { "role": "tertiary", "displayName": "Red Tint", "canonical": "#f2cbc7", "tonalRamp": ["#3d1411", "#73302a", "#a85b54", "#d28e88", "#e7b1ac", "#f2cbc7", "#f8e3e1", "#fdf7f6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Structural Display", "purpose": "Hero and major section statements." },
+      "body": { "displayName": "Plainspoken Body", "purpose": "Explanation, forms, and review attribution." }
+    },
+    "shadows": [
+      { "name": "verified-proof", "value": "0 18px 45px rgba(0,0,0,.28)", "purpose": "Public listing proof over photography." },
+      { "name": "contact-station", "value": "0 20px 46px rgba(67,24,10,.24)", "purpose": "Demo form over the red close." }
+    ],
+    "motion": [
+      { "name": "photo-resolve", "value": "1.1s cubic-bezier(.16,1,.3,1)", "purpose": "Roof image settles into focus." },
+      { "name": "roof-plane-reveal", "value": ".8s cubic-bezier(.16,1,.3,1)", "purpose": "Hero thesis uncovers as one structural plane." },
+      { "name": "ledger-lock", "value": ".58s cubic-bezier(.16,1,.3,1)", "purpose": "Public proof locks into the hero composition." },
+      { "name": "check-draw", "value": ".45s cubic-bezier(.16,1,.3,1)", "purpose": "Demo completion feedback." }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "950px" },
+      { "name": "mobile", "value": "700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Workwear-red square action control.",
+      "html": "<button class=\"ds-btn-primary\">PREVIEW REQUEST</button>",
+      "css": ".ds-btn-primary{min-height:54px;padding:14px 20px;border:1px solid #241d1b;border-radius:0;background:#c92f27;color:#fff;font:800 16px 'DM Sans',sans-serif;transition:transform .2s ease}.ds-btn-primary:hover{transform:translateY(-3px)}.ds-btn-primary:focus-visible{outline:3px solid #c92f27;outline-offset:4px}"
+    },
+    {
+      "name": "Review Highlight",
+      "kind": "card",
+      "description": "Square ruled quote with direct attribution.",
+      "html": "<article class=\"ds-review\"><blockquote>“The work was impeccable.”</blockquote><p>BERNADETTE JEFFS<br><small>GOOGLE REVIEW</small></p></article>",
+      "css": ".ds-review{padding:28px;background:#f2ede4;color:#241d1b;border:1px solid #c2c7bb}.ds-review blockquote{margin:0 0 34px;font:400 20px/1.3 'Archivo Black',sans-serif}.ds-review p{margin:0;font:800 13px 'DM Sans',sans-serif}.ds-review small{letter-spacing:.12em;opacity:.68}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Roof-Craft Ledger",
+    "overview": "A field report laid over documentary roofing work: crew-uniform red, deep oxblood, warm paper, and square ruled geometry.",
+    "keyCharacteristics": ["Full-bleed roof photography", "Structural display lettering", "Square ruled geometry", "One roof-plane focal entrance", "Explicit truth and demo disclosures"],
+    "rules": [
+      { "name": "The Workwear Red Rule", "body": "Solid red means act; oxblood means structure; the pale tint means notice supporting proof.", "section": "colors" },
+      { "name": "The One Structural Voice Rule", "body": "Display type states the thesis and section claims; body type explains and attributes.", "section": "typography" }
+    ],
+    "dos": ["Do keep public facts and demo disclosures visible.", "Do attribute every review excerpt directly.", "Do preserve reduced-motion behavior."],
+    "donts": ["Don't display the aggregate Google score.", "Don't represent illustrative photography as company project work."]
+  }
+}
