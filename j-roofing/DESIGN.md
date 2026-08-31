@@ -89,6 +89,7 @@ This is a route-specific visual world. It must not inherit another roofing templ
 **Key Characteristics:**
 
 - One generated crew image anchors the hero, paired with a compact verified Google proof badge.
+- The hero opens directly on the roof statement; Stockton location proof lives in the factual proof strip rather than a decorative eyebrow.
 - Asphalt green and mineral paper provide the field; safety orange is the action and proof signal.
 - Service rows lead directly to a preselected estimate request; the form opens a prefilled SMS to the verified phone.
 - Generated roofing photography is treated as illustrative concept material, never company project evidence.
@@ -142,7 +143,7 @@ The palette feels like charcoal roofing, mineral granules, aged sage roof materi
 
 ## Layout
 
-The desktop field is capped at 1380px with fluid outer gutters. The 74px fixed header frames a two-column hero: concise sales copy occupies the smaller column and one 540px-minimum crew image with an overlaid proof badge occupies the larger. Services repeat the asymmetric split with a sticky introduction and actionable ruled records. The dark estimate section uses an 0.8/1.2 copy-to-form split before the craft gallery and review proof. Reviews use a 12-column masonry-like arrangement; contact closes in two balanced columns.
+The desktop field is capped at 1380px with fluid outer gutters. The 74px fixed header frames a two-column hero: concise sales copy begins directly with the roof statement in the smaller column—there is no location eyebrow—and one 540px-minimum crew image with an overlaid proof badge occupies the larger. Stockton location proof remains in the factual strip below. Services repeat the asymmetric split with a sticky introduction and actionable ruled records. The dark estimate section uses an 0.8/1.2 copy-to-form split before the craft gallery and review proof. Reviews use a 12-column masonry-like arrangement; contact closes in two balanced columns.
 
 At 980px, navigation is removed, service content stacks, and reviews become two-up. At 720px, gutters reduce to 18px, the header becomes 66px, hero, estimate, gallery, and contact become one column, actions become full-width, the hero image becomes a 300px field, and reviews become an 86vw horizontal snap rail. Form fields stack in source order. A fixed 66px bottom bar preserves call and Google actions; footer space clears it.
 
@@ -150,7 +151,7 @@ At 980px, navigation is removed, service content stacks, and reviews become two-
 
 ## Elevation & Depth
 
-Depth is tactile and localized. The single hero image carries the strongest broad shadow; cards and contact actions use softer lift. Ruled service rows, form fields, and proof strips stay flat so imagery and action retain clear hierarchy.
+Depth is tactile and localized. The single hero image carries the strongest broad shadow; cards and contact actions use softer lift. On initial load, that image settles from a subtly enlarged, desaturated, high-contrast, 3px-blurred state into focus over 1 second using the tactile-out easing. Ruled service rows, form fields, and proof strips stay flat so imagery and action retain clear hierarchy. Reduced-motion preference collapses the entrance to the global near-instant fallback.
 
 - **Hero visual:** `0 28px 54px rgba(0,0,0,.28)` for the single crew concept image.
 - **Review card:** `0 14px 30px rgba(3,12,10,.16)` for customer excerpts.
@@ -173,7 +174,7 @@ Rounded rectangles feel practical rather than soft: form fields and the hero pro
 
 ### Cards / Containers
 
-- **Hero Visual:** One full-bleed crew concept image with a visible disclosure at lower left and an orange Google proof badge at lower right. Do not reintroduce stacked or rotating image bands.
+- **Hero Visual:** One full-bleed crew concept image with a visible disclosure at lower left and an orange Google proof badge at lower right. The image performs the one-time roof-settle entrance; below 720px, the disclosure moves to the top-left so it remains distinct from the proof badge. Do not reintroduce stacked or rotating image bands.
 - **Review Card:** Paper, orange, sage, and gutter-green variants in a deliberately irregular grid; 14px corners and 30px padding.
 - **Proof Strip:** Three edge-to-edge ruled records on orange; it is not a floating card group.
 
@@ -187,7 +188,11 @@ Each full-width ruled record is an accessible estimate link pairing an orange li
 
 ### Estimate Form
 
-The native form sits on Asphalt in a two-column grid with explicit visible labels. Inputs, select, and textarea use Review Field fill, Paper text, 10px corners, 54px minimum control height, and high-contrast focus. Submission does not send data to a server: it opens the visitor's messaging app with a prefilled SMS to the verified J Roofing number. The note beneath the button must state this behavior and retain the direct call alternative. Name, phone, property address, selected service, and project details remain required.
+The native form sits on Asphalt in a two-column grid with explicit visible labels. Inputs, select, and textarea use Review Field fill, Paper text, 10px corners, 54px minimum control height, a Safety Orange caret, and high-contrast focus. Submission does not send data to a server: it opens the visitor's messaging app with a prefilled SMS to the verified J Roofing number. The note beneath the button must state this behavior and retain the direct call alternative. Name, phone, property address, selected service, and project details remain required.
+
+### Viewport Theme
+
+The page chrome belongs to the material palette: the global thin scrollbar uses an Asphalt track and Safety Orange thumb, with a 3px Asphalt inset border in WebKit engines. Text-entry carets use Safety Orange. These accents are functional orientation cues, not extra decoration.
 
 ### Concept Image Label
 
@@ -200,6 +205,8 @@ Generated imagery must be identified as concept material in useful alt text and 
 - **Do** keep the first viewport to one disclosed crew concept image and one compact Google proof badge.
 - **Do** separate verified Google facts and customer quotations from illustrative photography.
 - **Do** preserve the 980px and 720px layout changes, reduced-motion behavior, visible focus, and mobile contact bar.
+- **Do** keep the hero free of a location eyebrow, retain the one-time roof-settle entrance, and move the concept disclosure to the top-left on mobile.
+- **Do** theme the global scrollbar and form caret with the established Asphalt and Safety Orange roles.
 - **Do** make every service row link to the estimate form with its service preselected.
 - **Do** disclose that estimate submission opens a prefilled SMS to the verified phone and keep the direct-call fallback.
 - **Do** source every new visual specifically for this route and label generated imagery as concept material.
