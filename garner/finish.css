@@ -1,0 +1,10 @@
+:root { caret-color: var(--copper); }
+html { scrollbar-color: var(--copper) var(--paper); scrollbar-width: thin; }
+a { text-underline-offset: 5px; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--copper); border: 3px solid var(--paper); }
+.hero h1 { font-size: clamp(4.2rem, 7vw, 6rem); }
+.services h3 { margin-top: 58px; }
+.success-mark { width: 62px; height: 62px; padding: 14px; background: var(--lime); fill: none; stroke: var(--ink); stroke-width: 5; stroke-linecap: square; stroke-linejoin: miter; }
+@media (max-width: 700px) { .hero h1 { font-size: clamp(3.35rem, 15vw, 5rem); } }

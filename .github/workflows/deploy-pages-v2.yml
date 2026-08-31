@@ -7,6 +7,7 @@
 #   /v2/               -> the TopGuard Roofing static concept in ./v2
 #   /marco-roofing/    -> the Marco Roofing Vite/React build
 #   /dryforce/         -> the Dryforce Vite/React build
+#   /garner/           -> the Garner Roofing static pitch concept
 #
 # Nothing is linked from the root, so each concept is reached by typing its URL.
 #
@@ -88,6 +89,11 @@ jobs:
         run: |
           mkdir -p dist-github/j-roofing
           cp -R dist-j-roofing/. dist-github/j-roofing/
+
+      - name: Add Garner Roofing concept at /garner/
+        run: |
+          mkdir -p dist-github/garner
+          cp -R garner/. dist-github/garner/
 
       - name: Add Ultimate Roof Repair concept at /ultimate/
         run: |

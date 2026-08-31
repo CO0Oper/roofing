@@ -14,6 +14,7 @@ reached by typing its own URL.
 | `https://co0oper.github.io/roofing/ultimate/v2/` | Ultimate Roof Repair — Vite/React concept |
 | `https://co0oper.github.io/roofing/v2/` | TopGuard Roofing — static concept |
 | `https://co0oper.github.io/roofing/marco-roofing/` | Marco Roofing — Vite/React concept |
+| `https://co0oper.github.io/roofing/garner/` | Garner Roofing — static review-led pitch concept |
 
 A blank root keeps the concepts out of casual browsing. It is not access control: the
 URLs above are public, and anyone who has one can open it.
